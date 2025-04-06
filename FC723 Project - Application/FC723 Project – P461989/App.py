@@ -167,7 +167,7 @@ class SeatBookingSystem:
                 for col in self.columns:  #loop through each column
                     if col == 'X':  #reset on aisle
                         free = []
-                        continue
+                        continue # skip this column (aisle), move to next seat in the same row
                     if self.seat_map[row][col] == 'F':  #check if seat is free
                         free.append((row, col))  #add seat to free list
                         if len(free) == num:  #if enough seats found
